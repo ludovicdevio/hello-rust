@@ -71,5 +71,15 @@ fn main() {
     println!("r || s: {}", r || s);
     println!("!r: {}", !r);
 
+    //Strucrures conditionnelles
+    let nombre = 15;
+    if nombre < 10 {
+        println!("Le nombre est inférieur à 10.");
+    } else if nombre == 10 {
+        println!("Le nombre est égal à 10.");
+    } else {
+        println!("Le nombre est supérieur à 10.");  
+    }
+
 
 }
