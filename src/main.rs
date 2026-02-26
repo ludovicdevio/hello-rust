@@ -80,6 +80,30 @@ fn main() {
     } else {
         println!("Le nombre est supérieur à 10.");  
     }
+    println!("\n");
 
+    // Boucles
+    println!("Boucle for:");
+    for i in 0..5 {
 
+        println!("i = {}", i);
+    }
+
+    println!("Boucle while:");
+    let mut j = 0;
+    while j < 5 {
+        println!("j = {}", j);
+        j += 1;
+    }
+
+    print!("Boucle loop:");
+    let mut k = 0;
+    loop {
+        if k >= 5 {
+            break;
+        }
+        println!("k = {}", k);
+        k += 1;
+    }
+    
 }
