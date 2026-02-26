@@ -105,5 +105,16 @@ fn main() {
         println!("k = {}", k);
         k += 1;
     }
+
+    println!("\n");
+
+    // Fonctions
+    fn addition(a: i32, b: i32) -> i32 {
+        a + b
+    }
+    let resultat = addition(5, 3);
+    println!("Le résultat de l'addition est: {}", resultat);
+
+
     
 }
