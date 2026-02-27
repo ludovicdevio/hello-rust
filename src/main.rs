@@ -214,10 +214,18 @@ fn main() {
     capitales.insert("Italie", "Rome");
     println!("Les capitales sont: {:?}", capitales);
 
-
-
-
-
+    //Gestion des erreurs
+    fn division(a: f64, b: f64) -> Result<f64, String> {
+        if b == 0.0 {
+            Err(String::from("Erreur: division par zéro"))
+        } else {
+            Ok(a / b)
+        }
+    }
+    match division(10.0, 0.0) {
+        Ok(resultat) => println!("Le résultat de la division est: {}", resultat),
+        Err(e) => println!("{}", e),
+    }
 
     
 }
