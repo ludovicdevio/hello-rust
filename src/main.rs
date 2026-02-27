@@ -115,6 +115,30 @@ fn main() {
     let resultat = addition(5, 3);
     println!("Le résultat de l'addition est: {}", resultat);
 
+    //Propriétés de la mémoire
+    let mut v = vec![1, 2, 3];
+    println!("Le vecteur v est: {:?}", v);
+    v.push(4);
+    println!("Après avoir ajouté 4, le vecteur v est: {:?}", v);
+
+    println!("\n");
+
+    let w: String = String::from("Hello");
+    let z = w; // w est déplacé vers z, w n'est plus valide
+    println!("La chaîne z est: {}", z);
+
+    println!("\n");
+
+    let t = 5;
+    let m=t;
+    println!("t = {}, m = {}", t, m); // t et m sont tous les deux valides
+    println!("\n");
+
+    let s1 = String::from("Salut le monde");
+    let s2 = s1.clone(); // s1 est cloné vers s2, s1 et s2 sont tous les deux valides
+    println!("s1 = {}, s2 = {}", s1, s2);
+
+
 
     
 }
