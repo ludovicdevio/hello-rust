@@ -138,6 +138,18 @@ fn main() {
     let s2 = s1.clone(); // s1 est cloné vers s2, s1 et s2 sont tous les deux valides
     println!("s1 = {}, s2 = {}", s1, s2);
 
+    //References et emprunts
+    let u = String::from("Bonjour");
+    let v = &u; // v est une référence à u, u reste valide
+    println!("u = {}, v = {}", u, v);
+
+    fn afficher_longueur(s: &String) {
+        println!("La longueur de '{}' est {}", s, s.len());
+    }
+    let s3 = String::from("Emprunt en Rust");
+    afficher_longueur(&s3); // on passe une référence à s3
+
+
 
 
     
