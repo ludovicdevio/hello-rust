@@ -138,6 +138,8 @@ fn main() {
     let s2 = s1.clone(); // s1 est cloné vers s2, s1 et s2 sont tous les deux valides
     println!("s1 = {}, s2 = {}", s1, s2);
 
+    println!("\n");
+
     //References et emprunts
     let u = String::from("Bonjour");
     let v = &u; // v est une référence à u, u reste valide
@@ -148,6 +150,71 @@ fn main() {
     }
     let s3 = String::from("Emprunt en Rust");
     afficher_longueur(&s3); // on passe une référence à s3
+
+    println!("\n");
+
+    // Structures de données
+        // Structs
+    struct Personne {
+        nom: String,
+        age: u32,
+    }
+    let personne1 = Personne {
+        nom: String::from("Alice"),
+        age: 30,
+    };
+    println!("La personne s'appelle {} et a {} ans.", personne1.nom, personne1.age);
+    println!("\n");
+
+        // Enums
+    enum Couleur {
+        Rouge,
+        Vert,
+        Bleu,
+    }
+    let couleur_preferee = Couleur::Vert;
+    match couleur_preferee {
+        Couleur::Rouge => println!("La couleur préférée est rouge."),
+        Couleur::Vert => println!("La couleur préférée est verte."),
+        Couleur::Bleu => println!("La couleur préférée est bleue."),
+    }
+    println!("\n");
+
+        //Arrays et slices
+    let tableau: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("Le tableau est: {:?}", tableau);
+    let tranche: &[i32] = &tableau[1..4]; // une tranche du tableau
+    println!("La tranche du tableau est: {:?}", tranche);
+
+    println!("\n");
+
+        //Collections
+    let mut vecteur: Vec<String> = Vec::new();
+    vecteur.push(String::from("Rust"));
+    vecteur.push(String::from("Langage"));
+    println!("Le vecteur est: {:?}", vecteur);
+    println!("\n");
+
+        //Vecteurs
+    let mut nombres: Vec<i32> = vec![1, 2, 3];
+    nombres.push(4);
+    println!("Le vecteur de nombres est: {:?}", nombres);   
+    println!("\n");
+
+        //Tuples
+    let tup: (i32, f64, &str) = (42, 3.14, "Hello");
+    println!("Le tuple est: {:?}", tup);
+    println!("\n");
+
+        //HashMaps
+    use std::collections::HashMap;
+    let mut capitales: HashMap<&str, &str> = HashMap::new();
+    capitales.insert("France", "Paris");
+    capitales.insert("Espagne", "Madrid");
+    capitales.insert("Italie", "Rome");
+    println!("Les capitales sont: {:?}", capitales);
+
+
 
 
 
